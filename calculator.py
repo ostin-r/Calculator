@@ -2,16 +2,16 @@
 Austin Richards 1/2/21 16:21
 '''
 # making a window with tkinter
-from tkinter import *
+import tkinter as tk
 
-class Window(Frame):
+class Window(tk.Frame):
 
     def __init__(self, master = None):
-        Frame.__init__(self, master)
+        tk.Frame.__init__(self, master)
 
         self.master = master
 
-root = Tk()
+root = tk.Tk()
 
 app = Window(root)
 
