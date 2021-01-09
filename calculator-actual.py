@@ -9,12 +9,8 @@ root = Tk()
 # set the window size
 root.geometry("347x330")
 
-# print whatever the user clicks on the top of the calculator
-def print_data():
-    # figure out how to do this part
-
 # make the required buttons for the calculator
-but0 = Button(root, text="0", height=50)
+but0 = Button(root, text="0")
 but1 = Button(root, text="1")
 but2 = Button(root, text="2")
 but3 = Button(root, text="3")
