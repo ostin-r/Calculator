@@ -17,16 +17,20 @@ def button_click(number):
     current = e.get()
     e.delete(0, END)
     e.insert(0, str(current) + str(number))
-    return
 
 def clear_display():
     e.delete(0, END)
 
 def button_add():
     first_number = e.get()
-    global glob_num
-    glob_num += int(first_number)
+    global global_num
+    global_num = int(first_number)
     e.delete(0, END)
+
+def button_equal():
+    second_number = e.get()
+    e.delete(0, END)
+    e.insert(0, global_num + int(second_number))
 
 
 # make the buttons
@@ -42,7 +46,7 @@ but9 = Button(gui, text="9", padx=40, pady=20, command=lambda: button_click(9))
 but0 = Button(gui, text="0", padx=40, pady=20, command=lambda: button_click(0))
 
 but_add   = Button(gui, text="+", padx=39, pady=20, command=button_add)
-but_equal = Button(gui, text="=", padx=39, pady=20, command=button_click)
+but_equal = Button(gui, text="=", padx=39, pady=20, command=button_equal)
 but_clear = Button(gui, text="clear", padx=130, pady=20, command=clear_display)
 
 # put the buttons on the window
