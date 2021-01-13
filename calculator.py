@@ -5,7 +5,6 @@ this project made from the help of freeCodeCamp.org !!!
 '''
 
 from tkinter import *
-from tkinter import ttk
 
 gui = Tk()
 gui.title("Simple Calculator")
@@ -13,10 +12,6 @@ gui.title("Simple Calculator")
 # make the display
 e = Entry(gui, width=40, borderwidth=2)
 e.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
-
-# create a style for the buttons
-theme = 'default'
-ttk.Style().theme_use(theme)
 
 # functions for the buttons
 def button_click(number):
